@@ -7,8 +7,6 @@ import {
   getDocumentFile,
 } from "../service/rag.service.js";
 
-// Upload and Process Documents  Abduselam
-
 export const uploadAndProcessDocument = async (req, res) => {
   const userId = req.user.id || req.user.userId;
   const file = req.file;

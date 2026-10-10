@@ -55,7 +55,7 @@ async function verifyActiveSession() {
 function clearSessionData() {
   localStorage.removeItem("authToken");
   localStorage.removeItem("activeUser");
-  delete apiClient.defaults.headers.common["Authorization"];
+  delete apiClient.defaults.headers.common["Authorization"]; 
 }
 
 function retrieveAuthToken() {

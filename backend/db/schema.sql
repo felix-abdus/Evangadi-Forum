@@ -122,7 +122,6 @@ DROP TABLE IF EXISTS `document_chunk_vectors`;
 CREATE TABLE `document_chunk_vectors` (
     `chunk_vector_id` BIGINT AUTO_INCREMENT PRIMARY KEY,
     `chunk_id` BIGINT NOT NULL,
-    `source_text` TEXT NOT NULL,
     `embedding_vector` JSON NOT NULL,
     `status` VARCHAR(20) NOT NULL DEFAULT 'ready',
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

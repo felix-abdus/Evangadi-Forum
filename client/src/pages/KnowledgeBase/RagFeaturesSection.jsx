@@ -68,7 +68,7 @@ export default function RagFeaturesSection({
     );
   };
 
-  const token = localStorage.getItem("authToken") || "";
+  const token = localStorage.getItem("authToken") || ""; 
 
   return (
     <>
@@ -103,7 +103,7 @@ export default function RagFeaturesSection({
                 )
               ) : (
                 <iframe
-                  src={`http://localhost:5000/api/rag/documents/${selectedDoc.documentId}/file?token=${encodeURIComponent(
+                  src={`${import.meta.env.VITE_API_BASE_URL || "http://localhost:5000ai"}/api/rag/documents/${selectedDoc.documentId}/file?token=${encodeURIComponent(
                     token,
                   )}`}
                   title={selectedDoc.title}
